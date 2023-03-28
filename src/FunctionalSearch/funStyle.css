@@ -1,56 +1,119 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-body{
-    font-family: sans-serif;
-}
-
-.appHead{
-    height: 100vh;
-    width: 100%;
-    display:flex;
-    justify-content: center;
-    align-items:flex-start;
-    margin: auto;
+body {
+  font-family: sans-serif;
 }
 
-div.searchBar{
-    width: 50%;
+.appHead {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: auto;
+}
+
+div.searchBar {
+  width: 60%;
+  display: block;
+  max-height: 50px;
+  /* margin-left: 100px; */
+}
+
+div.input-wrapper {
+  box-sizing: border-box;
+  width: 60%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  margin-top: 10px;
+  height: 2.5rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-left: 200px;
+}
+
+input[type="text"] {
+  box-sizing: border-box;
+  background: transparent;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  height: 2.5rem;
+  margin: auto;
+  overflow: hidden;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+input[type="text"]:focus {
+  outline: none;
+}
+
+div.finalList {
+  display: block;
+  flex-direction: column;
+  width: 70%;
+  line-height: 28px;
+  margin-top: 1rem;
+  max-height: 170px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-left: 140px;
+}
+
+div.renderList {
+  box-sizing: border-box;
+  width: 70%;
+  text-align: left;
+  margin-left: 50px;
+}
+
+div.lists {
+  width: 100%;
+  background-color: transparent;
+  padding: 0px 20px;
+  text-transform: uppercase;
+}
+
+div.renderList:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  font-family: sans-serif;
+}
+
+@media all and (max-width: 600px) {
+  div.appHead {
+    margin-top: 15%;
+  }
+  div.searchBar {
     display: block;
-    max-height: 50px;
-    /* margin-left: 100px; */
-}
-
-div.input-wrapper{
-    box-sizing: border-box;
-    width: 60%;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 15px;
-    margin-top: 10px;
-    height: 2.5rem;
-    background-color: rgba(0, 0, 0, 0.2);
-    margin-left: 200px;
-}
-
-input[type="text"]{
-    box-sizing: border-box;
-    background: transparent;
     width: 100%;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 15px;
-    height: 2.5rem;
+    padding: 0px 15px;
+  }
+  div.input-wrapper {
+    width: 100%;
+    background-color: rgba(10, 20, 30, 0.5);
     margin: auto;
-    overflow: hidden;
-    border: none;
-    text-transform: uppercase;
-    font-weight: bolder;
-}
-input[type="text"]:focus{
-    outline: none;
+  }
+
+  div.finalList {
+    margin-left: 10px;
+    display: block;
+  }
+  div.renderList {
+    margin: auto;
+    width: 100%;
+  }
+
+  div.lists {
+    padding: 0;
+    height: 25px;
+  }
 }

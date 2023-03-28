@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
-import HigherOrder from "../HigherOrderFunction/HigherOrderFunction";
 
 const URl = "https://dummyjson.com/products?limit=100";
-const SearchBar = ({ inputVal, setInputVal, setResult }) => {
+const SearchBar = ({ setResult, inputVal, setInputVal, setCondition }) => {
   const [data, setData] = useState([]);
-
   useEffect(() => {
-    fetchData()
+    fetchData();
   }, []);
 
   const fetchData = () => {
@@ -31,11 +29,15 @@ const SearchBar = ({ inputVal, setInputVal, setResult }) => {
 
   const reduce = (values) => {
     setInputVal(values);
+    setResult(
+      values &&
+        data.filter((item, id) => item.title.trim().toLowerCase().includes(values))
+    );
   };
 
   const onchangeHandle = debounce(reduce);
 
-  return ( console.log(data,'dta'),
+  return (
     <>
       <div className="input-wrapper">
         <FaSearch id="searchIcon" />
@@ -43,12 +45,15 @@ const SearchBar = ({ inputVal, setInputVal, setResult }) => {
           type="text"
           placeholder="Search your Queries..."
           value={inputVal}
-          onChange={(event) => onchangeHandle(event.target.value)}
+          onChange={(event) => {
+            setCondition(false);
+            onchangeHandle(event.target.value);
+          }}
         />
       </div>
     </>
   );
 };
-export default HigherOrder(SearchBar);
+export default SearchBar;
 
 // npm install react-icons --save
