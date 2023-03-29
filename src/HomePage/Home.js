@@ -1,26 +1,12 @@
 import React from "react";
-
-const HomePage=()=>{
-
-
-
-
-
-
-
-
-
-
-
-
-return(
-<>
-<div>
-    Home Page
-</div>
-
-</>
-
-)
-}
+import Stars from "../TsParticles";
+const HomePage = () => {
+  return (
+    <>
+      <div>
+        <Stars />
+      </div>
+    </>
+  );
+};
 export default HomePage;

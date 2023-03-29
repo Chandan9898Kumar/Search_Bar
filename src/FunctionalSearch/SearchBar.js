@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 
 const URl = "https://dummyjson.com/products?limit=100";
-const SearchBar = ({ setResult, inputVal, setInputVal, setCondition }) => {
-  const [data, setData] = useState([]);
+const SearchBar = ({ setResult, inputVal, setInputVal, setCondition ,data,setData}) => {
   useEffect(() => {
     fetchData();
   }, []);
@@ -31,7 +30,7 @@ const SearchBar = ({ setResult, inputVal, setInputVal, setCondition }) => {
     setInputVal(values);
     setResult(
       values &&
-        data.filter((item, id) => item.title.trim().toLowerCase().includes(values))
+        data.filter((item, id) => item.title.trim().toLowerCase()===values ? item.title.trim().toLowerCase()===values : item.title.trim().toLowerCase().includes(values))
     );
   };
 

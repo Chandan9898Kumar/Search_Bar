@@ -88,6 +88,40 @@ div.renderList:hover {
   font-family: sans-serif;
 }
 
+div.imageResult {
+  display: block;
+  margin-top: 50px;
+  width: 100%;
+  height: 100vh;
+}
+
+div.images {
+  display: inline-block;
+  border: 1px solid gray;
+  height: 250px;
+  width: 50%;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+div.imageRender {
+  background-color: cadetblue;
+  margin: auto;
+  text-align: center;
+  text-transform: capitalize;
+  border-radius: 10px;
+}
+div.imageRender p {
+  margin-bottom: 5px;
+  font-weight: bolder;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+div img {
+  width: 500px;
+  height: 200px;
+}
+
 @media all and (max-width: 600px) {
   div.appHead {
     margin-top: 15%;
@@ -116,4 +150,46 @@ div.renderList:hover {
     padding: 0;
     height: 25px;
   }
+
+  /*  Image Setting  */
+  div.imageResult {
+    display: block;
+    margin-top: 50px;
+    width: 100%;
+    height: 100vh;
+  }
+
+  div.images {
+    display: inline-block;
+    border: 1px solid gray;
+    height: 250px;
+    width: 50%;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  div.imageRender {
+    background-color: cadetblue;
+    margin: auto;
+    text-align: center;
+    text-transform: capitalize;
+    border-radius: 10px;
+  }
+  div.imageRender p {
+    margin-bottom: 5px;
+    font-weight: bolder;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+
+  div img {
+    width: 150px;
+    height: 200px;
+  }
 }
+
+@media all and (min-width: 600px) {
+  div img {
+    width: 300px;
+  }
+}
+

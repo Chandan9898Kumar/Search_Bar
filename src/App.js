@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 import NavBar from "./NavBar/NavBar";
 import MainFunctionalPage from "./FunctionalSearch/MainSearchPage";
 import HomePage from "./HomePage/Home";
