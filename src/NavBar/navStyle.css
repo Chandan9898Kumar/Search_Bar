@@ -56,9 +56,13 @@ ul.nav-elements li a:hover {
   color: white;
 }
 
-/* .active {
+.actives {
   background-color: #04aa6d;
-} */
+}
+
+.inactive{
+color: #666;;
+}
 
 @media all and (max-width: 600px) {
   ul.nav-elements {

@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+div.headingClass {
+  width: 100%;
+  height: 100vh;
+  background: rgba(20, 40, 60, 0.4);
+}
+
+div.searchBarClass {
+  width: 80%;
+  max-height: 60px;
+  display: block;
+  /* background-color: brown; */
+  margin: auto;
+}
+
+div.searchInputBar {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: auto;
+  background: rgba(122, 122, 23, 0.6);
+  border-radius: 10px;
+}
+
+input[type="search"].input-field {
+  width: 100%;
+  height: 2.5rem;
+  margin-top: 5px;
+  box-sizing: border-box;
+  background: transparent;
+  box-sizing: border-box;
+  background: transparent;
+  border-radius: 10px;
+  border: none;
+  font-size: larger;
+  text-align: left;
+  color: black;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+input[type="search"].input-field:focus {
+  outline: none;
+}

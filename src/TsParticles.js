@@ -1,13 +1,9 @@
 import React from "react";
-import './App.css'
+import "./App.css";
 export default function Stars() {
-
-
   return (
     <>
-      <div className="App-header ">
-
-      </div>
+      <div className="App-header "></div>
     </>
-      );
+  );
 }
