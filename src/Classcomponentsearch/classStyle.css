@@ -6,7 +6,7 @@
 div.headingClass {
   width: 100%;
   height: 100vh;
-  background: rgba(20, 40, 60, 0.4);
+  /* background: rgba(20, 40, 60, 0.4); */
 }
 
 div.searchBarClass {
@@ -26,6 +26,7 @@ div.searchInputBar {
   margin: auto;
   background: rgba(122, 122, 23, 0.6);
   border-radius: 10px;
+  margin-top: 10px;
 }
 
 input[type="search"].input-field {
@@ -46,4 +47,94 @@ input[type="search"].input-field {
 }
 input[type="search"].input-field:focus {
   outline: none;
+}
+
+div.renderListMainCom {
+  box-sizing: border-box;
+  display: block;
+  width: 50%;
+  margin: auto;
+  background: rgba(7, 7, 7, 0.6);
+  border-radius: 10px;
+  flex-direction: column;
+  overflow-y: scroll;
+  max-height: 170px;
+  color: white;
+  overflow-x: hidden;
+  line-height: 15px;
+  margin-top: 10px;
+}
+
+div.showListComp {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+div.showListComp:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  font-family: sans-serif;
+}
+
+div.listChildItem {
+  background-color: transparent;
+  padding: 0px 20px;
+  text-transform: uppercase;
+}
+
+div.imageRenderClass {
+  display: block;
+  width: 100%;
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+div.showImage {
+  margin: 5px;
+  display: inline-block;
+  padding: 35px;
+  border: 1px solid gray;
+}
+
+div.childImages {
+  text-align: center;
+}
+
+@media all and (max-width: 400px) {
+  div.headingClass {
+    margin-top: 30%;
+  }
+
+  div.searchInputBar,
+  div.renderListMainCom {
+    width: 100%;
+  }
+
+  div.imageRenderClass {
+    display: block;
+    width: 100%;
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  div.headingClass {
+    margin-top: 30%;
+  }
+
+  div.searchInputBar,
+  div.renderListMainCom {
+    width: 100%;
+  }
+
+  div.imageRenderClass {
+    display: block;
+    width: 100%;
+    margin-top: 50px;
+    margin-left: 50px;
+  }
 }

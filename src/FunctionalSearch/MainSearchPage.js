@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import { lazy, Suspense } from "react";
 import SearchBar from "./SearchBar";
 import FinalList from "./FinalList";
 import "./funStyle.css";
-
-import ImageREnder from "./ImageRender";
+// import ImageREnder from "./ImageRender";
+const ImageREnder = lazy(() => import("./ImageRender"));
 const MainFunctionalPage = () => {
   const [result, setResult] = useState([]);
   const [inputVal, setInputVal] = useState("");
@@ -30,7 +31,7 @@ const MainFunctionalPage = () => {
           />
 
           <div className="imageResult">
-            {inputVal && inputVal.length && result && result.length
+            {inputVal && inputVal.trim().length && result && result.length
               ? result.map((item, id) => {
                   return (
                     <div key={id} className="images">
@@ -39,11 +40,13 @@ const MainFunctionalPage = () => {
                   );
                 })
               : data &&
-                data.length &&
+                data.length > 0 &&
                 data.map((item, id) => {
                   return (
                     <div key={id} className="images">
-                      <ImageREnder item={item} />
+                      <Suspense fallback={<div>Please Wait...</div>}>
+                        <ImageREnder item={item} />
+                      </Suspense>
                     </div>
                   );
                 })}
