@@ -23,6 +23,15 @@ const NavBar = () => {
               Class Search
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="/EmiCalculator"
+              className={({ isActive }) => (isActive ? "actives" : "inactive")}
+            >
+              EMI Calculator
+            </NavLink>
+          </li>
+
           <li className="home">
             <NavLink
               to="/"
