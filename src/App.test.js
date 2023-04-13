@@ -1,5 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
+import Enzyme from 'enzyme';
+import Adapter from '@cfaester/enzyme-adapter-react-18';
+Enzyme.configure({ adapter: new Adapter() });
 
 describe('Check App Component', () => {
   it('Verify Functional Search', () => {
@@ -23,6 +26,11 @@ describe('Check App Component', () => {
     render(<App />)
     const home=screen.getByText(/Home/i)
     expect(home).toBeInTheDocument();
+  })
+  it('should verify Dictionary',()=>{
+    render(<App />)
+    const Dictionary=screen.getByText(/Dictionary/i)
+    expect(Dictionary).toBeInTheDocument();
   })
   
 })
