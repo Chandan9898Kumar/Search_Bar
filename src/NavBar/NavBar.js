@@ -39,6 +39,14 @@ const NavBar = () => {
               Dictionary
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="/CountdownTimer"
+              className={({ isActive }) => (isActive ? "actives" : "inactive")}
+            >
+              Timer
+            </NavLink>
+          </li>
 
           <li className="home">
             <NavLink
