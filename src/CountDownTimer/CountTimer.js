@@ -89,6 +89,7 @@ const CountdownTimer = () => {
 
           <div className="inputButtons">
             <input
+              data-testid="Hour"
               ref={Hr}
               type="number"
               placeholder="00"
@@ -98,6 +99,7 @@ const CountdownTimer = () => {
               }}
             />
             <input
+              data-testid="Minute"
               ref={Min}
               type="number"
               placeholder="00"
@@ -107,6 +109,7 @@ const CountdownTimer = () => {
               }}
             />
             <input
+              data-testid="Second"
               ref={Sec}
               type="number"
               placeholder="00"
@@ -127,6 +130,7 @@ const CountdownTimer = () => {
               //     ? "disabled"
               //     : "button start"
               // }
+              data-testid="startButton"
               className="button start"
               onClick={(event) => {
                 startButton(event);
@@ -136,6 +140,7 @@ const CountdownTimer = () => {
             </button>
 
             <button
+              data-testid="pauseButton"
               className="button pause"
               onClick={(event) => pauseButton(event)}
             >
@@ -143,6 +148,7 @@ const CountdownTimer = () => {
             </button>
 
             <button
+              data-testid="resetButton"
               className="button reset"
               onClick={(event) => resetButton(event)}
             >
