@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+div.containerWatch {
+    width: 100vw;
+    height: 100vh;
+}
+
+div.SubWatch {
+  display: block;
+  width: 60%;
+  background: rgba(134, 134, 137, 0.3);
+  margin: auto;
+  text-align: center;
+}
+
+div.textWatch{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+    font-weight: bolder;
+}

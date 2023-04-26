@@ -47,6 +47,14 @@ const NavBar = () => {
               Timer
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="/stopWatch"
+              className={({ isActive }) => (isActive ? "actives" : "inactive")}
+            >
+              Watch
+            </NavLink>
+          </li>
 
           <li className="home">
             <NavLink
