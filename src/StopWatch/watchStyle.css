@@ -3,20 +3,38 @@
 }
 
 div.containerWatch {
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
 }
 
 div.SubWatch {
+  position: relative;
   display: block;
-  width: 60%;
-  background: rgba(134, 134, 137, 0.3);
+  width: 50%;
+  background: rgba(30, 30, 32, 0.3);
   margin: auto;
   text-align: center;
+  top: 50px;
+  height: 380px;
 }
 
-div.textWatch{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: larger;
-    font-weight: bolder;
+div.textWatch {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+div.showTimer {
+  display: block;
+  width: 100%;
+  height: 40px;
+  /* background-color: brown; */
+}
+
+div.buttonOfTimer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  /* background-color: burlywood; */
 }

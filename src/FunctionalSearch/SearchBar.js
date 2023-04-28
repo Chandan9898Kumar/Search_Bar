@@ -52,6 +52,7 @@ const SearchBar = ({
       <div className="input-wrapper">
         <FaSearch id="searchIcon" />
         <input
+          spellCheck="true"
           data-testid="inputField"
           type="text"
           placeholder="Search your Queries..."

@@ -1,22 +1,10 @@
-import React from "react"
+import React from "react";
 
-
-const SetTimer=()=>{
-
-
-
-
-
-
-
-
-
-
-return(
+const SetTimer = ({ time }) => {
+  return (
     <>
-        
+      <div className="showTimer">{time}</div>
     </>
-
-)
-}
+  );
+};
 export default SetTimer;
