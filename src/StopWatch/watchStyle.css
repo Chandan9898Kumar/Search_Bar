@@ -20,21 +20,182 @@ div.SubWatch {
 
 div.textWatch {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: larger;
+  width: 100%;
+  background-color: cadetblue;
+  color: azure;
+  height: 60px;
+}
+.textWatchContainer {
+  font-size: 40px;
   font-weight: bolder;
+  letter-spacing: 2px;
 }
 
 div.showTimer {
+  position: relative;
+  top: 50px;
   display: block;
   width: 100%;
-  height: 40px;
-  /* background-color: brown; */
+  height: 60px;
+}
+div.showTimer span.showTimerText {
+  display: inline-block;
+  margin-top: 1px;
+  font-size: 50px;
 }
 
 div.buttonOfTimer {
+  position: relative;
+  top: 100px;
   width: 100%;
   display: flex;
   justify-content: center;
-  height: 40px;
+  height: 60px;
   /* background-color: burlywood; */
+}
+
+div.resetPauseResumeButton {
+  display: flex;
+}
+
+.resetTimerButton,
+.PauseResumeTimerButton {
+  cursor: pointer;
+  transition: all 1s;
+  text-align: center;
+  font-size: 25px;
+  border: 1px solid orange;
+  border-radius: 15px;
+  padding: 5px;
+  display: inline-block;
+  height: 60px;
+  width: 130px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.resetTimerButton:hover {
+  background-color: rgb(212, 198, 171);
+}
+.resetTimerButton span,
+.PauseResumeTimerButton span {
+  cursor: pointer;
+  display: inline;
+  position: relative;
+  transition: 1s;
+  letter-spacing: 1px;
+}
+
+.resetTimerButton:hover span {
+  padding-right: 25px;
+  color: white;
+}
+
+.resetTimerButton span:after {
+  content: "\00bb";
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: 1s;
+  right: -20px;
+}
+.resetTimerButton:hover span:after {
+  opacity: 1;
+  right: 0;
+  color: white;
+}
+
+/* PauseResumeTimerButton */
+
+.PauseResumeTimerButton {
+  cursor: pointer;
+  transition: all 1s;
+  text-align: center;
+  font-size: 25px;
+  border: 1px solid rgb(129, 154, 129);
+  border-radius: 15px;
+  padding: 5px;
+  display: inline-block;
+  height: 60px;
+  width: 150px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.PauseResumeTimerButton:hover {
+  background-color: rgb(129, 154, 129);
+}
+
+.PauseResumeTimerButton span {
+  cursor: pointer;
+  display: inline;
+  position: relative;
+  transition: 1s;
+  letter-spacing: 1px;
+}
+
+.PauseResumeTimerButton:hover span {
+  padding-right: 20px;
+  color: black;
+}
+
+.PauseResumeTimerButton span:after {
+  content: "\00bb";
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: 1s;
+  right: -20px;
+}
+.PauseResumeTimerButton:hover span:after {
+  opacity: 1;
+  right: 0;
+  color: black;
+}
+
+/* startTimerButton */
+
+.startTimerButton {
+  display: inline;
+  width: 120px;
+  height: 60px;
+  border-radius: 10px;
+  border: 1px solid salmon;
+  padding: 10px;
+  transition: all 1s;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.startTimerButton:hover {
+  background-color: salmon;
+}
+
+.startTimerButton span {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 25px;
+  letter-spacing: 2px;
+  transition: all 1s;
+  position: relative;
+}
+
+.startTimerButton:hover span {
+  padding-right: 25px;
+  color: azure;
+}
+
+.startTimerButton span:after {
+  content: "\00bb";
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: 1s;
+  right: -20px;
+}
+.startTimerButton:hover span:after {
+  opacity: 1;
+  right: 0;
+  color: azure;
 }

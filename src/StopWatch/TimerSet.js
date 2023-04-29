@@ -3,7 +3,9 @@ import React from "react";
 const SetTimer = ({ time }) => {
   return (
     <>
-      <div className="showTimer">{time}</div>
+      <div className="showTimer">
+        <span className="showTimerText">{time}</span>
+      </div>
     </>
   );
 };

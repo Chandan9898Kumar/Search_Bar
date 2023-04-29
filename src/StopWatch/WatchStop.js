@@ -40,7 +40,7 @@ const StopWatchApp = () => {
       <div className="containerWatch">
         <div className="SubWatch">
           <div className="textWatch">
-            <h2>Stop Watch</h2>
+            <span className="textWatchContainer">Stop Watch</span>
           </div>
           <SetTimer time={time} />
           <ControlButton
