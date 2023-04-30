@@ -13,7 +13,7 @@ const StopWatchApp = () => {
     if (isActive && isPaused === false) {
       intervalId = setInterval(() => {
         setTime((time) => time + 1);
-      }, 100);
+      }, 10);
     } else {
       clearInterval(intervalId);
     }
