@@ -42,6 +42,12 @@ const StopWatchApp = () => {
           <div className="textWatch">
             <span className="textWatchContainer">Stop Watch</span>
           </div>
+          <div className="TimerName">
+            <p className="timerPElement">HR</p>
+            <p className="timerPElement">Min</p>
+            <p className="timerPElement">Sec</p>
+            <p className="timerPElement">M.Sec</p>
+          </div>
           <SetTimer time={time} />
           <ControlButton
             active={isActive}

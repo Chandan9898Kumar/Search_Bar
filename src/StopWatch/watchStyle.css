@@ -10,12 +10,14 @@ div.containerWatch {
 div.SubWatch {
   position: relative;
   display: block;
-  width: 50%;
+  width: 55%;
   background: rgba(30, 30, 32, 0.3);
   margin: auto;
   text-align: center;
   top: 50px;
   height: 380px;
+  overflow: auto;
+  border-radius: 10px;
 }
 
 div.textWatch {
@@ -29,9 +31,31 @@ div.textWatch {
   font-size: 40px;
   font-weight: bolder;
   letter-spacing: 2px;
+  animation-name: textWatchContainer;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 
-div.showTimer {
+@keyframes textWatchContainer {
+  25% {
+    opacity: 1;
+    color: rgba(30, 130, 32, 1);
+  }
+  50% {
+    opacity: 0.5;
+    color: rgba(130, 50, 82, 0.5);
+  }
+  75% {
+    opacity: 0.1;
+    color: rgba(3, 10, 62, 0.4);
+  }
+  100% {
+    opacity: 1;
+    color: rgba(0, 50, 132, 0.1);
+  }
+}
+
+/* div.showTimer {
   position: relative;
   top: 50px;
   display: block;
@@ -42,11 +66,11 @@ div.showTimer span.showTimerText {
   display: inline-block;
   margin-top: 1px;
   font-size: 50px;
-}
+} */
 
 div.buttonOfTimer {
   position: relative;
-  top: 100px;
+  top: 125px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -200,4 +224,58 @@ div.resetPauseResumeButton {
   color: azure;
 }
 
+/* Text input filed of timer */
+.showTimerSecond {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 75px;
+}
 
+input[type="number"].inputStopTimer {
+  width: 120px;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 40px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bolder;
+  text-align: center;
+  background: transparent;
+  font-size: 40px;
+  border-bottom: 1px solid gray;
+}
+
+div.TimerName {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  top: 25px;
+  font-size: 30px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.timerPElement {
+  animation-name: timer-name;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes timer-name {
+  0% {
+    color: red;
+    transform: rotate(0deg);
+  }
+  25% {
+    color: rgb(67, 67, 64);
+    transform: rotate(90deg);
+  }
+  50% {
+    color: gray;
+    transform: rotate(180deg);
+  }
+  100% {
+    color: orangered;
+    transform: rotate(360deg);
+  }
+}
