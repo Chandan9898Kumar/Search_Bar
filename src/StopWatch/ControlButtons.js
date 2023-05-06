@@ -13,6 +13,7 @@ const ControlButton = ({
         {active && (
           <div className="resetPauseResumeButton">
             <button
+              data-testid="ResetButton"
               className="resetTimerButton"
               onClick={(event) => handleReset(event)}
             >
@@ -20,6 +21,7 @@ const ControlButton = ({
             </button>
 
             <button
+              data-testid="PauseContButton"
               className="PauseResumeTimerButton"
               onClick={(event) => handlePauseResume(event)}
             >
@@ -30,6 +32,7 @@ const ControlButton = ({
 
         {!active && (
           <button
+            data-testid="StartButton"
             className="startTimerButton"
             onClick={(event) => handleStartTime(event)}
           >

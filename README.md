@@ -29,3 +29,11 @@ npm i -D @babel/core @babel/preset-env @babel/preset-react babel-loader file-loa
 
 
 `Enzyme   npm install --save-dev @cfaester/enzyme-adapter-react-18`
+
+
+
+npm run test -  this will run Jest and execute all the tests
+
+npm run test:watch  - will run all the tests and keep on watch mode, so that when we make any changes to our test cases, it will execute those test cases again.
+
+npm run test:coverage  - will generate a coverage report based on all the tests it executes, and give you a detailed coverage report in the app/coverage folder.
