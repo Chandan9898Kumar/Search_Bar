@@ -6,6 +6,7 @@ import MainClassSearchPage from "./Classcomponentsearch/MainClassPage";
 import MainEmiPage from "./EmiCalculator/MainEmi";
 import CountdownTimer from "./CountDownTimer/CountTimer";
 import StopWatchApp from './StopWatch/WatchStop'
+import InfiniteScroll from './InfiniteScroller/Scroller'
 function App() {
   return (
     <>
@@ -18,6 +19,8 @@ function App() {
           <Route exact path="/EmiCalculator" element={<MainEmiPage />} />
           <Route exact path="/CountdownTimer" element={<CountdownTimer />} />
           <Route exact path="/stopWatch" element={<StopWatchApp />} />
+          <Route exact path="/Scroller" element={<InfiniteScroll />} />
+
         </Routes>
       </BrowserRouter>
     </>

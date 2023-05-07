@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+div.containerOfScroller {
+  display: grid;
+  /* justify-content: center; */
+  grid-template-rows: auto;
+  gap: 10px;
+  background-color: #aecfeb;
+  padding: 10px;
+}
+
+.containerOfScroller > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+div.ScrollText {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 40px;
+  color: white;
+}
+
+div.ScrollInput {
+  background-color: rgba(203, 199, 199, 0.8);
+  border-radius: 10px;
+  width: 80%;
+  margin: auto;
+  transition: all 2s;
+}
+
+div.ScrollInput:hover {
+  background-color: black;
+  outline: 2px solid blue;
+  opacity: 0.8;
+}
+
+input[type="search"].scrollInputText {
+  height: 40px;
+  width: 95%;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: transparent;
+  font-size: 30px;
+  transition: all 1s;
+  border: none;
+}
+
+.iconOfSearch,
+input[type="search"].scrollInputText:hover {
+  color: white;
+}

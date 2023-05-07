@@ -12,7 +12,7 @@ const NavBar = () => {
               to="/functional"
               className={({ isActive }) => (isActive ? "actives" : "inactive")}
             >
-              Functional Search
+              Function Search
             </NavLink>
           </li>
           <li>
@@ -53,6 +53,15 @@ const NavBar = () => {
               className={({ isActive }) => (isActive ? "actives" : "inactive")}
             >
               Watch
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink
+              to="/Scroller"
+              className={({ isActive }) => (isActive ? "actives" : "inactive")}
+            >
+              Scroller
             </NavLink>
           </li>
 
