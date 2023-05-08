@@ -7,7 +7,7 @@ Enzyme.configure({ adapter: new Adapter() });
 describe('Check App Component', () => {
   it('Verify Functional Search', () => {
     render(<App />);
-    const linkElement = screen.getByText(/Functional Search/i);
+    const linkElement = screen.getByText(/Function Search/i);
     expect(linkElement).toBeInTheDocument();
   });
 
