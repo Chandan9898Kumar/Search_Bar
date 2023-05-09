@@ -23,6 +23,7 @@ div.ScrollText {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 40px;
   color: white;
+  overflow: hidden;
 }
 
 div.ScrollInput {
@@ -31,6 +32,7 @@ div.ScrollInput {
   width: 80%;
   margin: auto;
   transition: all 2s;
+  overflow: hidden;
 }
 
 div.ScrollInput:hover {

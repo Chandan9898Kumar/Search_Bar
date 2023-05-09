@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import "./scrollStyle.css";
 import { FaSearch } from "react-icons/fa";
-const InfiniteScroll = () => {
+import ScrollingElement from "./ScrollElements";
+const MainComponent = () => {
   const [searchText, setSearchText] = useState("");
+  const [data, setData] = useState([]);
 
-  const handleSearchTextChange = (event) => {
+  const handleSearchTextChange = useCallback((event) => {
     setSearchText(event.target.value);
-  };
+  }, []);
 
   return (
     <>
@@ -29,8 +31,13 @@ const InfiniteScroll = () => {
             onChange={(event) => handleSearchTextChange(event)}
           />
         </div>
+        <div>
+          <ScrollingElement 
+          inputValue={searchText} 
+          data={data} />
+        </div>
       </div>
     </>
   );
 };
-export default InfiniteScroll;
+export default MainComponent;
