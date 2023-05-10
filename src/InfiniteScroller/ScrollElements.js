@@ -1,6 +1,6 @@
 import React,{memo} from "react"
 
-const ScrollingElement=({...props})=>{
+const ScrollingElement=({inputValue,listData,getData,renderListItem})=>{
 
 
 
@@ -9,7 +9,7 @@ const ScrollingElement=({...props})=>{
 
 
 
-return(console.log('props>>>>>>>>>>>>>>'),
+return(
 
   <>
 
