@@ -17,7 +17,9 @@ const MainComponent = () => {
     </div>
   ));
 
-  const getData = useCallback(() => {}, []);
+  const getData = useCallback((val,pageNumber) => {
+
+  }, []);
   return (
     <>
       <div className="containerOfScroller">
