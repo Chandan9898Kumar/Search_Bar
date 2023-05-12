@@ -56,3 +56,13 @@ input[type="search"].scrollInputText {
 input[type="search"].scrollInputText:hover {
   color: white;
 }
+
+.renderScrollItems{
+  display: block;
+  text-align: left;
+}
+
+.titleOfScroller{
+  display: block;
+  margin-left: 30%;
+}
