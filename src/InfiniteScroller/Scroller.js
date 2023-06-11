@@ -64,6 +64,7 @@ const MainComponent = () => {
             style={{ color: "gray" }}
           />
           <input
+            data-testid="searchField"
             className="scrollInputText"
             type="search"
             placeholder="Search Here..."
