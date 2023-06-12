@@ -15,6 +15,9 @@ describe("Check Main Scroller Component", () => {
     render(<MainComponent />);
     const fireInput=screen.getByTestId('searchField')
     fireEvent.change(fireInput,{target:{value:'search'}})
-
+  })
+  it('should check div element',()=>{
+    const { container }= render(<MainComponent />);
+    expect(container).toMatchSnapshot();
   })
 });

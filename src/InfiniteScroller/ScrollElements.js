@@ -9,7 +9,6 @@ const ScrollingElement = ({
   // initialPage is 1
   const pageNumber = useRef(1);
   const [loading, setLoading] = useState(false);
-
   const observer = useRef(null);
 
   // whenever inputText is changed then we then our function should get called in UseEffect.
@@ -64,13 +63,16 @@ const ScrollingElement = ({
     // In ListData we are having 1k data,but only 100 data's are shown because our viewPort can show only that,
     //  rest data will be hidden.so render all 1k data we are need infiniteScroller .
     // we set condition on last index of an array.
-    return listData.map((item, index) => {
-      if (index === listData.length - 1) {
-        // when we are having last index of an array,then we passed lastElementObserver to renderListItem() as a ref
-        return renderListItem(item, index, lastElementObserver);
-      }
-      return renderListItem(item, index, null);
-    });
+    return (
+      listData &&
+      listData.map((item, index) => {
+        if (index === listData.length - 1) {
+          // when we are having last index of an array,then we passed lastElementObserver to renderListItem() as a ref
+          return renderListItem(item, index, lastElementObserver);
+        }
+        return renderListItem(item, index, null);
+      })
+    );
   });
 
   return (
