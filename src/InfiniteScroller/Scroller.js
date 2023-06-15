@@ -64,6 +64,7 @@ const MainComponent = () => {
             style={{ color: "gray" }}
           />
           <input
+            spellCheck
             data-testid="searchField"
             className="scrollInputText"
             type="search"
