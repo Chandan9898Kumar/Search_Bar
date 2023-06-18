@@ -4,6 +4,7 @@ const InputText = ({ state, setState }) => {
   return (
     <div>
       <input
+        autoComplete={true}
         spellCheck={true}
         type="number"
         value={state}
