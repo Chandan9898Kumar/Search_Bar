@@ -52,34 +52,36 @@ const MainComponent = () => {
 
   return (
     <>
-      <div className="containerOfScroller">
-        <div className="ScrollText">
-          <span>Infinite Scroller</span>
-        </div>
+      <div className="headPage">
+        <div className="containerOfScroller">
+          <div className="ScrollText">
+            <span>Infinite Scroller</span>
+          </div>
 
-        <div className="ScrollInput">
-          <FaSearch
-            className="iconOfSearch"
-            id="searchIcon"
-            style={{ color: "gray" }}
-          />
-          <input
-            spellCheck
-            data-testid="searchField"
-            className="scrollInputText"
-            type="search"
-            placeholder="Search Here..."
-            value={searchText}
-            onChange={(event) => handleSearchTextChange(event)}
-          />
-        </div>
-        <div>
-          <ScrollingElement
-            inputValue={searchText}
-            listData={data}
-            getData={getData}
-            renderListItem={renderItem}
-          />
+          <div className="ScrollInput">
+            <FaSearch
+              className="iconOfSearch"
+              id="searchIcon"
+              style={{ color: "gray" }}
+            />
+            <input
+              spellCheck
+              data-testid="searchField"
+              className="scrollInputText"
+              type="search"
+              placeholder="Search Here..."
+              value={searchText}
+              onChange={(event) => handleSearchTextChange(event)}
+            />
+          </div>
+          <div>
+            <ScrollingElement
+              inputValue={searchText}
+              listData={data}
+              getData={getData}
+              renderListItem={renderItem}
+            />
+          </div>
         </div>
       </div>
     </>
