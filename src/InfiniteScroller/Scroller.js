@@ -23,15 +23,22 @@ const MainComponent = () => {
     //  Here we did not pass any data inside resolve() and reject(),currently we don't need it,just performing asynchronous operation.
     return new Promise(async (resolve, reject) => {
       try {
+
         if (controllerRef.current) {
           //  if we are calling getData() again and again,so it will abort all the previous network calls.
           controllerRef.current.abort();
+          // Aborts a DOM request before it has completed. This is able to abort fetch requests, consumption of any response bodies, and streams.
         }
+
         // new AbortController() - It can be used to abort not only fetch , but other asynchronous tasks as well.
+        // The AbortController interface represents a controller object that allows you to abort one or more Web requests as and when desired.
         controllerRef.current = new AbortController();
 
-        //  for this a fresh network call will be created.we passed the signal property of an AbortController as a fetch option.
-        // The fetch method knows how to work with AbortController. It will listen to abort events on signal
+        // For this a fresh network call will be created.we passed the signal property of an AbortController as a fetch option.
+        // The fetch method knows how to work with AbortController. It will listen to abort events on signal.
+
+        // Signal : The signal read-only property of the AbortController interface returns an AbortSignal object instance, which can be used to communicate with/abort a DOM request as desired.
+
         const promise = await fetch(
           "https://openlibrary.org/search.json?" +
             new URLSearchParams({
@@ -46,6 +53,7 @@ const MainComponent = () => {
         setData((prevData) => [...prevData, ...data.docs]);
       } catch (e) {
         reject();
+        // When abort() is called, the fetch() promise rejects with a DOMException named AbortError.
       }
     });
   }, []);
