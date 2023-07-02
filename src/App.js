@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./NavBar/NavBar";
 import MainFunctionalPage from "./FunctionalSearch/MainSearchPage";
@@ -8,13 +8,11 @@ import MainEmiPage from "./EmiCalculator/MainEmi";
 import CountdownTimer from "./CountDownTimer/CountTimer";
 import StopWatchApp from "./StopWatch/WatchStop";
 import MainComponent from "./InfiniteScroller/Scroller";
-
+const DictionaryApp = lazy(() => import("./Dictionary/DictionaryHome"));
 function App() {
-  
-
   return (
     <>
-      <Suspense fallback={'Please Wait...'}>
+      <Suspense fallback={"Please Wait..."}>
         <BrowserRouter>
           <NavBar />
           <Routes>
@@ -25,6 +23,7 @@ function App() {
             <Route exact path="/CountdownTimer" element={<CountdownTimer />} />
             <Route exact path="/stopWatch" element={<StopWatchApp />} />
             <Route exact path="/Scroller" element={<MainComponent />} />
+            <Route exact path="/DictionaryApp" element={<DictionaryApp />} />
           </Routes>
         </BrowserRouter>
       </Suspense>

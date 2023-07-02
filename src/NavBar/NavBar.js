@@ -33,7 +33,7 @@ const NavBar = () => {
           </li>
           <li>
             <NavLink
-              to="/Dictionary"
+              to="/DictionaryApp"
               className={({ isActive }) => (isActive ? "actives" : "inactive")}
             >
               Dictionary
