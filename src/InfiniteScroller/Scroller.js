@@ -23,7 +23,6 @@ const MainComponent = () => {
     //  Here we did not pass any data inside resolve() and reject(),currently we don't need it,just performing asynchronous operation.
     return new Promise(async (resolve, reject) => {
       try {
-
         if (controllerRef.current) {
           //  if we are calling getData() again and again,so it will abort all the previous network calls.
           controllerRef.current.abort();
@@ -67,13 +66,13 @@ const MainComponent = () => {
           </div>
 
           <div className="ScrollInput">
-           <div>
-           <FaSearch
-              className="iconOfSearch"
-              id="searchIcon"
-              style={{ color: "gray" }}
-            />
-           </div>
+            <div>
+              <FaSearch
+                className="iconOfSearch"
+                id="searchIcon"
+                style={{ color: "gray" }}
+              />
+            </div>
             <input
               spellCheck
               data-testid="searchField"
