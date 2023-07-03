@@ -32,6 +32,9 @@ div.ScrollText {
 }
 
 div.ScrollInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgba(203, 199, 199, 0.8);
   border-radius: 10px;
   width: 80%;

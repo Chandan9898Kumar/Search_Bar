@@ -11,9 +11,9 @@ const ScrollingElement = ({
   const [loading, setLoading] = useState(false);
   const observer = useRef(null);
 
-  // whenever inputText is changed then we then our function should get called in UseEffect.
+  // whenever inputText is changed then  our function should get called in UseEffect.
   //  Note :- here we have called fetchData() function above useEffect because in useEffect we have passed fetchData() function
-  //  as an dependency.so if we called that function below useEffect then it will throw error which show can't access before initialization.
+  //  as an dependency and declare variable as const so its come under hoisting hence if we called that function below useEffect then it will throw error which show can't access before initialization.
   const fetchData = useCallback(() => {
     setLoading(true);
     getData(inputValue, pageNumber.current).finally(() => {
@@ -32,6 +32,7 @@ const ScrollingElement = ({
     }
 
     if (observer.current) {
+    // disconnect  : The IntersectionObserver method disconnect() stops watching all of its target elements for visibility changes. 
       observer.current.disconnect();
     }
     // The options object passed into the IntersectionObserver() constructor let you control

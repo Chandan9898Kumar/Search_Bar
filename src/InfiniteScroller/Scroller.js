@@ -51,8 +51,8 @@ const MainComponent = () => {
         const data = await promise.json();
         resolve();
         setData((prevData) => [...prevData, ...data.docs]);
-      } catch (e) {
-        reject();
+      } catch (error) {
+        reject(error);
         // When abort() is called, the fetch() promise rejects with a DOMException named AbortError.
       }
     });
@@ -67,11 +67,13 @@ const MainComponent = () => {
           </div>
 
           <div className="ScrollInput">
-            <FaSearch
+           <div>
+           <FaSearch
               className="iconOfSearch"
               id="searchIcon"
               style={{ color: "gray" }}
             />
+           </div>
             <input
               spellCheck
               data-testid="searchField"
