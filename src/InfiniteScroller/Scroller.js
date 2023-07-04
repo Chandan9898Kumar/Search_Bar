@@ -13,7 +13,8 @@ const MainComponent = () => {
 
   //  will render item on ui.
   const renderItem = useCallback(({ title }, key, lastElementObserver) => (
-    // here ref is lastElementObserver,which is from <ScrollingElement /> component
+    //  key is index of last element.
+    //  Here ref is lastElementObserver,which is from <ScrollingElement /> component
     <div className="renderScrollItems" ref={lastElementObserver} key={key}>
       <span className="titleOfScroller">{title}</span>
     </div>
