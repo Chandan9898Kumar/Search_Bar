@@ -93,3 +93,25 @@ export default memo(ScrollingElement);
 
 //  A target element intersects either the device's viewport or a specified element. That specified element is called the root element or root for the purposes of the Intersection Observer API.
 //  The first time the observer is initially asked to watch a target element.
+
+
+
+//                                               IntersectionObserver()
+
+//   Creates a new IntersectionObserver object which will execute a specified callback function when it detects that a target element's visibility has crossed one or more thresholds.
+
+//                                                     Instance methods
+
+// IntersectionObserver.disconnect()
+//     Stops the IntersectionObserver object from observing any target.
+
+// IntersectionObserver.observe()
+//     Tells the IntersectionObserver a target element to observe.
+
+
+// IntersectionObserver.takeRecords()
+//     Returns an array of IntersectionObserverEntry objects for all observed targets.
+
+// IntersectionObserver.unobserve()
+//     Tells the IntersectionObserver to stop observing a particular target element.
+
