@@ -51,6 +51,7 @@ const ScrollingElement = ({
     // Once you have created the observer, you need to give it a target element to watch:
 
     if (node) {
+      // Call its observe() method to begin watching for the visibility changes on a given target. 
       observer.current.observe(node);
     }
     // the callback we setup for the observer will be executed now for the first time
