@@ -2,6 +2,7 @@ import React, { useState, useCallback, useRef } from "react";
 import "./scrollStyle.css";
 import { FaSearch } from "react-icons/fa";
 import ScrollingElement from "./ScrollElements";
+
 const MainComponent = () => {
   const [searchText, setSearchText] = useState("");
   const [data, setData] = useState([]);
@@ -11,10 +12,10 @@ const MainComponent = () => {
     setSearchText(event.target.value);
   }, []);
 
-  //  It will render item on ui.
+  //  It will render item on UI.
   const renderItem = useCallback(({ title }, key, lastElementObserver) => (
     //  key is the index of last element.
-    //  Here ref is lastElementObserver,which is from <ScrollingElement /> component
+    //  Here ref is lastElementObserver,which is from <ScrollingElement /> component.
     <div className="renderScrollItems" ref={lastElementObserver} key={key}>
       <span className="titleOfScroller">{title}</span>
     </div>
@@ -99,7 +100,7 @@ const MainComponent = () => {
 };
 export default MainComponent;
 
-//                        The AbortController object  :-
+//                     The AbortController object  :-
 
 // Create a controller:
 
