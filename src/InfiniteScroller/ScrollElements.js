@@ -101,18 +101,19 @@ export default memo(ScrollingElement);
 
 //   Creates a new IntersectionObserver object which will execute a specified callback function when it detects that a target element's visibility has crossed one or more thresholds.
 
-//                                                     Instance methods
+//                                                     Instance methods    -    
+
 
 // IntersectionObserver.disconnect()
-//     Stops the IntersectionObserver object from observing any target.
+// Stops the IntersectionObserver object from observing any target.
 
 // IntersectionObserver.observe()
-//     Tells the IntersectionObserver a target element to observe.
+// Tells the IntersectionObserver a target element to observe.
 
 
 // IntersectionObserver.takeRecords()
-//     Returns an array of IntersectionObserverEntry objects for all observed targets.
+// Returns an array of IntersectionObserverEntry objects for all observed targets.
 
 // IntersectionObserver.unobserve()
-//     Tells the IntersectionObserver to stop observing a particular target element.
+// Tells the IntersectionObserver to stop observing a particular target element.
 
