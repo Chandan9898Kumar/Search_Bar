@@ -6,6 +6,8 @@ const ScrollingElement = ({
   getData,
   renderListItem,
 }) => {
+
+
   // initialPage is 1
   const pageNumber = useRef(1);
   const [loading, setLoading] = useState(false);
@@ -14,6 +16,8 @@ const ScrollingElement = ({
   // whenever inputText is changed then  our function should get called in UseEffect.
   //  Note :- here we have called fetchData() function above useEffect because in useEffect we have passed fetchData() function
   //  as an dependency and declare variable as const so its come under hoisting hence if we called that function below useEffect then it will throw error which show can't access before initialization.
+
+
   const fetchData = useCallback(() => {
     setLoading(true);
     getData(inputValue, pageNumber.current).finally(() => {
@@ -47,7 +51,7 @@ const ScrollingElement = ({
       }
     });
 
-    //                                                 Targeting an element to be observed.
+    //                              Targeting an element to be observed - :
     // Once you have created the observer, you need to give it a target element to watch:
 
     if (node) {
@@ -88,20 +92,19 @@ const ScrollingElement = ({
 };
 export default memo(ScrollingElement);
 
-//                                                   Intersection observer concepts and usage
+//                          Intersection observer concepts and usage :-
 
 // The Intersection Observer API allows you to configure a callback that is called when either of these circumstances occur:
-
 //  A target element intersects either the device's viewport or a specified element. That specified element is called the root element or root for the purposes of the Intersection Observer API.
 //  The first time the observer is initially asked to watch a target element.
 
 
 
-//                                               IntersectionObserver()
+//                            IntersectionObserver() -
 
 //   Creates a new IntersectionObserver object which will execute a specified callback function when it detects that a target element's visibility has crossed one or more thresholds.
 
-//                                                     Instance methods    -    
+//                            Instance methods    -    
 
 
 // IntersectionObserver.disconnect()
