@@ -1,13 +1,10 @@
 import React, { memo, useEffect, useRef, useCallback, useState } from "react";
-
 const ScrollingElement = ({
   inputValue,
   listData,
   getData,
   renderListItem,
 }) => {
-
-
   // initialPage is 1
   const pageNumber = useRef(1);
   const [loading, setLoading] = useState(false);
@@ -51,7 +48,7 @@ const ScrollingElement = ({
       }
     });
 
-    //                              Targeting an element to be observed - :
+    //                       Targeting an element to be observed - :
     // Once you have created the observer, you need to give it a target element to watch:
 
     if (node) {
