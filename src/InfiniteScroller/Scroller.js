@@ -63,6 +63,7 @@ const MainComponent = () => {
     <>
       <div className="headPage">
         <div className="containerOfScroller">
+        
           <div className="ScrollText">
             <span>Infinite Scroller</span>
           </div>
@@ -86,6 +87,7 @@ const MainComponent = () => {
             />
           </div>
           <div>
+
             <ScrollingElement
               inputValue={searchText}
               listData={data}
@@ -93,6 +95,7 @@ const MainComponent = () => {
               renderListItem={renderItem}
             />
           </div>
+
         </div>
       </div>
     </>
