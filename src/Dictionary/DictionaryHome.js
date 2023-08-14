@@ -1,9 +1,11 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 const DictionaryApp = () => {
+
+
   return (
     <>
       <div className="Container">
-        <h2>Dictionary App</h2>
+        <h1>Dictionary App</h1>
       </div>
     </>
   );
