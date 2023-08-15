@@ -1,13 +1,13 @@
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./NavBar/NavBar";
-import MainFunctionalPage from "./FunctionalSearch/MainSearchPage";
-import HomePage from "./HomePage/Home";
-import MainClassSearchPage from "./Classcomponentsearch/MainClassPage";
-import MainEmiPage from "./EmiCalculator/MainEmi";
-import CountdownTimer from "./CountDownTimer/CountTimer";
-import StopWatchApp from "./StopWatch/WatchStop";
-import MainComponent from "./InfiniteScroller/Scroller";
+const MainFunctionalPage = lazy(() => import("./FunctionalSearch/MainSearchPage"));
+const HomePage = lazy(() => import("./HomePage/Home"));
+const MainClassSearchPage = lazy(() => import("./Classcomponentsearch/MainClassPage"));
+const MainEmiPage = lazy(() => import("./EmiCalculator/MainEmi"));
+const CountdownTimer = lazy(() => import("./CountDownTimer/CountTimer"));
+const StopWatchApp = lazy(() => import("./StopWatch/WatchStop"));
+const MainComponent = lazy(() => import("./InfiniteScroller/Scroller"));
 const DictionaryApp = lazy(() => import("./Dictionary/DictionaryHome"));
 function App() {
   return (
@@ -30,5 +30,4 @@ function App() {
     </>
   );
 }
-
 export default App;
