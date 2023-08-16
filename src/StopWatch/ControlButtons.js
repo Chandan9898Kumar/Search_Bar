@@ -10,6 +10,7 @@ const ControlButton = ({
 }) => {
 
   //                      Handling Events.
+  
   return (
     <>
       <div className="buttonOfTimer">
@@ -46,4 +47,5 @@ const ControlButton = ({
     </>
   );
 };
+
 export default ControlButton;
