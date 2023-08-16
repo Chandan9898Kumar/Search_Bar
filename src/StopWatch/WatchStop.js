@@ -4,9 +4,13 @@ import "./watchStyle.css";
 import SetTimer from "./TimerSet";
 import ControlButton from "./ControlButtons";
 const StopWatchApp = () => {
+
+  //  Stored Data. 
   const [isActive, setIsActive] = useState(false);
   const [isPaused, setIsPaused] = useState(true);
   const [time, setTime] = useState(0);
+
+
 
   useEffect(() => {
     let intervalId;
