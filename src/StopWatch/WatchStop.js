@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./watchStyle.css";
-
 import SetTimer from "./TimerSet";
 import ControlButton from "./ControlButtons";
+
 const StopWatchApp = () => {
 
   //  Stored Data. 
@@ -10,8 +10,7 @@ const StopWatchApp = () => {
   const [isPaused, setIsPaused] = useState(true);
   const [time, setTime] = useState(0);
 
-
-
+  //    Handling Counter Movements.
   useEffect(() => {
     let intervalId;
     if (isActive && isPaused === false) {
