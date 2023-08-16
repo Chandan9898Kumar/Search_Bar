@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const SetTimer = ({ time }) => {
+  
   const [hr, setHR] = useState("");
   const [min, setMin] = useState("");
   const [sec, setSec] = useState("");
