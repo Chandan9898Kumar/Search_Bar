@@ -1,5 +1,6 @@
 import React from "react";
 
+//  Controlling Buttons.
 const ControlButton = ({
   active,
   pause,
@@ -7,6 +8,8 @@ const ControlButton = ({
   handlePauseResume,
   handleReset,
 }) => {
+
+  //                      Handling Events.
   return (
     <>
       <div className="buttonOfTimer">
