@@ -9,7 +9,7 @@ const ControlButton = ({
   handleReset,
 }) => {
 
-  //                      Handling Events.
+  //                   Handling Events.
   
   return (
     <>
