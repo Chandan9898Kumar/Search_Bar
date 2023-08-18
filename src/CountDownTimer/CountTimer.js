@@ -14,8 +14,9 @@ const CountdownTimer = () => {
   const Min = useRef(null);
   const Sec = useRef(null);
   
-  //  Here we used UseRef to get direct values from input element, we used setInterval so whenever we are change our
-  //  state it does not show updated  values inside Timer() function so we used useRef.
+  //  Here we used UseRef to get direct values from input element,
+  //  we used setInterval so whenever we are change our state,
+  // it does not show updated  values inside Timer() function so we used useRef.
   const startButton = function (event) {
     if (
       +Hr.current.value === 0 &&
