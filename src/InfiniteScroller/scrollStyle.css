@@ -16,19 +16,24 @@ div.containerOfScroller {
   background-color: #aecfeb;
 }
 
-.containerOfScroller>div {
+.containerOfScroller > div {
   text-align: center;
   padding: 20px 0;
   font-size: 30px;
 }
 
 div.ScrollText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 40px;
   color: white;
   overflow: hidden;
+  gap: 100px;
 }
 
 div.ScrollInput {
@@ -73,4 +78,19 @@ input[type="search"].scrollInputText:hover {
 .titleOfScroller {
   display: block;
   margin-left: 30%;
+}
+
+#btn {
+  height: 50px;
+  width: auto;
+  color: cadetblue;
+  font-family: "Times New Roman", Times, serif;
+  border-radius: 10px;
+  border: 1px solid black;
+  font-size: medium;
+  cursor: pointer;
+}
+
+#btn:hover {
+  color: black;
 }
