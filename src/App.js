@@ -1,13 +1,10 @@
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./NavBar/NavBar";
-const MainFunctionalPage = lazy(() =>
-  import("./FunctionalSearch/MainSearchPage")
-);
+// eslint-disable-next-line
+const MainFunctionalPage = lazy(() => import("./FunctionalSearch/MainSearchPage"));
 const HomePage = lazy(() => import("./HomePage/Home"));
-const MainClassSearchPage = lazy(() =>
-  import("./Classcomponentsearch/MainClassPage")
-);
+const MainClassSearchPage = lazy(() => import("./Classcomponentsearch/MainClassPage"));
 const MainEmiPage = lazy(() => import("./EmiCalculator/MainEmi"));
 const CountdownTimer = lazy(() => import("./CountDownTimer/CountTimer"));
 const StopWatchApp = lazy(() => import("./StopWatch/WatchStop"));
@@ -22,6 +19,7 @@ const ScrollerTypeTwo = lazy(() =>
   import("./NewInfiniteScroller/ScrollerTypeTwo")
 );
 function App() {
+  /* eslint-enable eqeqeq */
   return (
     <>
       <Suspense fallback={"Please Wait..."}>
