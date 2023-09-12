@@ -134,9 +134,10 @@ const MainEmiPage = () => {
           <div className="tenure">
             <span>Tenure</span>
             <div className="tenureContainer">
-              {tenureData.map((dataTenure) => {
+              {tenureData.map((dataTenure,index) => {
                 return (
                   <button
+                    key={index}
                     className={
                       dataTenure === tenure ? "activeButton" : "buttonStyle"
                     }

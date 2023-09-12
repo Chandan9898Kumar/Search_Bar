@@ -23,7 +23,7 @@ const MainComponent = () => {
 
   const getData = useCallback((inputValue, pageNumber) => {
     //  Here we did not pass any data inside resolve() and reject(),currently we don't need it,just performing asynchronous operation.
-    return new Promise(async (resolve, reject) => {
+    return new Promise((resolve, reject) => {
       try {
         if (controllerRef.current) {
           //  if we are calling getData() again and again,so it will abort all the previous network calls.
@@ -40,7 +40,7 @@ const MainComponent = () => {
 
         // Signal : The signal read-only property of the AbortController interface returns an AbortSignal object instance, which can be used to communicate with/abort a DOM request as desired.
 
-        const promise = await fetch(
+        const promise =  fetch(
           "https://openlibrary.org/search.json?" +
             new URLSearchParams({
               q: inputValue,
@@ -48,10 +48,14 @@ const MainComponent = () => {
             }),
           { signal: controllerRef.current.signal }
         );
-
-        const data = await promise.json();
-        resolve();
-        setData((prevData) => [...prevData, ...data.docs]);
+        
+        promise.then((response)=>response.json()).then(async(result)=>{
+              let data = await result
+              setData((prevData) => [...prevData, ...data.docs])
+              resolve();
+        });
+        
+        
       } catch (error) {
         reject(error);
         // When abort() is called, the fetch() promise rejects with a DOMException named AbortError.

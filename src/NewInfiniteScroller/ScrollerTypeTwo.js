@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 
 export default function ScrollerTypeTwo() {
   const [count, setCount] = useState(50);
@@ -12,7 +12,7 @@ export default function ScrollerTypeTwo() {
   }
 
   //    Its width need to modify later .
-  const handleScroll = (event) => {
+  const handleScroll = () => {
     let overHeight = scrollElement.current.offsetHeight + co++;
 
     if (overHeight + 30 >= window.innerHeight - 450) {

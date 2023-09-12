@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
 
 const URl = "https://dummyjson.com/products?limit=100";
@@ -37,7 +37,7 @@ const SearchBar = ({
     setInputVal(values);
     setResult(
       values &&
-        data.filter((item, id) =>
+        data.filter((item) =>
           item.title.trim().toLowerCase() === values
             ? item.title.trim().toLowerCase() === values
             : item.title.trim().toLowerCase().includes(values)

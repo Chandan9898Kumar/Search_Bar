@@ -1,6 +1,35 @@
+{
+  "env": {
+    "development": {
+      "presets": [
+        "env"
+      ],
+      "plugins": [
+        [
+          "transform-es2015-modules-commonjs",
+          {
+            "allowTopLevelThis": true
+          }
+        ],
+        "@babel/plugin-transform-runtime"
+      ]
+    }
+  }
+}
+
+
+
+
+
+
 // {
 //   "presets": ["@babel/preset-env", "@babel/preset-react"]
 // }
+
+
+
+
+
 
 // module.exports = {
 //     presets: [
@@ -16,16 +45,26 @@
 //     plugins: [],
 //   };
 
-{
-  "presets": [
-    ["@babel/preset-env", { "targets": { "node": "current" } }],
-    ["@babel/preset-react", { "runtime": "automatic" }]
-  ]
-}
+
+
+
+
+// {
+//   "presets": [
+//     ["@babel/preset-env", { "targets": { "node": "current" } }],
+//     ["@babel/preset-react", { "runtime": "automatic" }]
+//   ]
+// }
+
+
+
+
 
 // {
 //   "presets": ["@babel/preset-env", "@babel/preset-react"]
 // }
+
+
 
 
 // {
