@@ -5,7 +5,7 @@ class ShowImage extends React.Component {
     return (
       <>
         <div className="childImages">
-          <img src={this.props.item.thumbnail} alt={this.props.item.title} />
+          <img src={this.props.item.thumbnail} alt={this.props.item.title} loading="lazy"/>
           <p>{this.props.item.title}</p>
         </div>
       </>
