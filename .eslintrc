@@ -1,78 +1,169 @@
 {
-    "plugins": [
-      "react",
-      "jest"
-    ],
-    "extends": [
-      "eslint:recommended",
-      "plugin:react/recommended",
-      "plugin:jest/recommended"
-    ],
-    "parser": "babel-eslint",
-    "parserOptions": {
-      "sourceType": "module",
-      "ecmaVersion": 7,
-      "ecmaFeatures": {
-        "impliedStrict": true,
-        "jsx": true
+  "plugins": ["react", "jest"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:jest/recommended"
+  ],
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 7,
+    "ecmaFeatures": {
+      "impliedStrict": true,
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jest": true
+  },
+  "rules": {
+    "no-useless-escape": 2,
+    "handle-callback-err": 2,
+    "no-fallthrough": 2,
+    "no-new-require": 2,
+    "max-len": [2, 280],
+    "camelCase": 0,
+    "require-jsdoc": 0,
+    "no-console": 0,
+    "valid-jsdoc": 0,
+    "prefer-spread": 1,
+    "prefer-rest-params": 1,
+    "linebreak-style": 0,
+    "quote-props": ["error", "as-needed"],
+    "react/no-unescaped-entities": [
+      2,
+      {
+        "forbid": [">", "}"]
       }
-    },
-    "env": {
-      "browser": true,
-      "node": true,
-      "es6": true,
-      "jest": true
-    },
-    "rules": {
-      "no-useless-escape": 2,
-      "handle-callback-err": 2,
-      "no-fallthrough": 2,
-      "no-new-require": 2,
-      "max-len": [
-        2,
-        280
-      ],
-      "camelCase": 0,
-      "require-jsdoc": 0,
-      "no-console": 0,
-      "valid-jsdoc": 0,
-      "prefer-spread": 1,
-      "prefer-rest-params": 1,
-      "linebreak-style": 0,
-      "quote-props": [
-        "error",
-        "as-needed"
-      ],
-      "react/no-unescaped-entities": [
-        2,
-        {
-          "forbid": [
-            ">",
-            "}"
-          ]
-        }
-      ],
-      "react/prop-types": 0,
-      "react/display-name": 0
-    },
-    "globals": {
-      "PushStream": "off",
-      "skeletonPwa": "off",
-      "Atomics": "readonly",
-      "SharedArrayBuffer": "readonly"
-    
-    },
-    "settings": {
-      "react": {
-        "createClass": "createReactClass", // Regex for Component Factory to use,
-                                           // default to "createReactClass"
-        "pragma": "React",                 // Pragma to use, default to "React"
-        "fragment": "Fragment",            // Fragment to use (may be a property of <pragma>), default to "Fragment"
-        "version": "detect",               // React version. "detect" automatically picks the version you have installed.
-                                           // You can also use `16.0`, `16.3`, etc, if you want to override the detected value.
-                                           // default to latest and warns if missing
-                                           // It will default to "detect" in the future
-        "flowVersion": "0.53"              // Flow version
-      }
+    ],
+    "react/prop-types": 0,
+    "react/display-name": 0
+  },
+  "globals": {
+    "PushStream": "off",
+    "skeletonPwa": "off",
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "settings": {
+    "react": {
+      "createClass": "createReactClass", // Regex for Component Factory to use,
+      // default to "createReactClass"
+      "pragma": "React", // Pragma to use, default to "React"
+      "fragment": "Fragment", // Fragment to use (may be a property of <pragma>), default to "Fragment"
+      "version": "detect", // React version. "detect" automatically picks the version you have installed.
+      // You can also use `16.0`, `16.3`, etc, if you want to override the detected value.
+      // default to latest and warns if missing
+      // It will default to "detect" in the future
+      "flowVersion": "0.53" // Flow version
     }
   }
+}
+
+
+
+//   {
+//   "env": {
+//     "browser": true,
+//     "es2021": true,
+//     "node": true,
+//     "jest": true
+//   },
+//   "parser": "@babel/eslint-parser",
+//   "parserOptions": {
+//     "ecmaFeatures": {
+//       "jsx": true
+//     },
+//     "requireConfigFile": false,
+//     "ecmaVersion": 12,
+//     "sourceType": "module",
+//     "babelOptions": {
+//       "presets": [
+//         "@babel/preset-react"
+//       ]
+//     }
+//   },
+//   "extends": [
+//     "eslint:recommended",
+//     "plugin:react/recommended",
+//     "plugin:react/jsx-runtime",
+//     "plugin:prettier/recommended",
+//     "plugin:import/react"
+//   ],
+//   "plugins": [
+//     "react",
+//     "import"
+//   ],
+//   "settings": {
+//     "react": {
+//       "version": "detect"
+//     },
+//     "import/resolver": {
+//       "node": {
+//         "extensions": [
+//           ".js",
+//           ".jsx"
+//         ],
+//         "moduleDirectory": [
+//           "node_modules",
+//           "src"
+//         ]
+//       }
+//     }
+//   },
+//   "rules": {
+//     "prettier/prettier": [
+//       "error",
+//       {
+//         "singleQuote": true
+//       }
+//     ],
+//     "linebreak-style": [
+//       "error",
+//       "unix"
+//     ],
+//     "quotes": [
+//       "error",
+//       "single",
+//       {
+//         "avoidEscape": true
+//       }
+//     ],
+//     "semi": [
+//       "error",
+//       "always"
+//     ],
+//     "no-trailing-spaces": "error",
+//     "no-console": "error",
+//     "no-unused-vars": [
+//       "error",
+//       {
+//         "argsIgnorePattern": "^_"
+//       }
+//     ],
+//     "react/no-unescaped-entities": "off",
+//     "react/require-default-props": "error",
+//     "sort-imports": [
+//       "error",
+//       {
+//         "ignoreCase": true,
+//         "ignoreDeclarationSort": true
+//       }
+//     ],
+//     "import/no-unresolved": [
+//       "error",
+//       {
+//         "commonjs": true,
+//         "amd": true
+//       }
+//     ],
+//     "import/named": "error",
+//     "import/namespace": "error",
+//     "import/default": "error",
+//     "import/export": "error"
+//   }
+// }

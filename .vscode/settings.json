@@ -1,0 +1,26 @@
+// {
+//     "editor.formatOnSave": true,
+//     "eslint.alwaysShowStatus": true,
+//     "files.autoSave": "onFocusChange",
+//     "editor.defaultFormatter": "esbenp.prettier-vscode",
+//     "editor.codeActionsOnSave": [
+//         "source.formatDocument",
+//         "source.fixAll.eslint"
+//     ],
+//     "prettier.trailingComma": "es5"
+// }
+
+
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnPaste": true, // required 
+    "editor.formatOnType": true, // required
+    "editor.formatOnSave": true, // optional 
+    "editor.formatOnSaveMode": "file", // required to format on save
+    "vs-code-prettier-eslint.prettierLast": true, // set as "true" to run 'prettier' last not first'
+    "eslint.alwaysShowStatus": true,
+        "editor.codeActionsOnSave": [
+        "source.formatDocument",
+        "source.fixAll.eslint"
+    ],
+  }

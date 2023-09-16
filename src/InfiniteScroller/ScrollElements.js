@@ -32,7 +32,7 @@ const ScrollingElement = ({
     }
 
     if (observer.current) {
-    // disconnect  : The IntersectionObserver method disconnect() stops watching all of its target elements for visibility changes. 
+      // disconnect  : The IntersectionObserver method disconnect() stops watching all of its target elements for visibility changes.
       observer.current.disconnect();
     }
 
@@ -46,17 +46,16 @@ const ScrollingElement = ({
         pageNumber.current += 1;
         fetchData();
       }
-      
     });
 
     //                       Targeting an element to be observed - :
     // Once you have created the observer, you need to give it a target element to watch:
 
     if (node) {
-      // Call its observe() method to begin watching for the visibility changes on a given target. 
+      // Call its observe() method to begin watching for the visibility changes on a given target.
       observer.current.observe(node);
     }
-    
+
     // the callback we setup for the observer will be executed now for the first time
     // it waits until we assign a target to our observer (even if the target is currently not visible)
 
@@ -97,14 +96,11 @@ export default memo(ScrollingElement);
 //  A target element intersects either the device's viewport or a specified element. That specified element is called the root element or root for the purposes of the Intersection Observer API.
 //  The first time the observer is initially asked to watch a target element.
 
-
-
 //                            IntersectionObserver() -
 
 //   Creates a new IntersectionObserver object which will execute a specified callback function when it detects that a target element's visibility has crossed one or more thresholds.
 
-//                            Instance methods    -    
-
+//                            Instance methods    -
 
 // IntersectionObserver.disconnect()
 // Stops the IntersectionObserver object from observing any target.
@@ -112,10 +108,8 @@ export default memo(ScrollingElement);
 // IntersectionObserver.observe()
 // Tells the IntersectionObserver a target element to observe.
 
-
 // IntersectionObserver.takeRecords()
 // Returns an array of IntersectionObserverEntry objects for all observed targets.
 
 // IntersectionObserver.unobserve()
 // Tells the IntersectionObserver to stop observing a particular target element.
-
