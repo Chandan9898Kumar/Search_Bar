@@ -2,7 +2,7 @@ import React, { useState, useCallback, useRef } from "react";
 import "./scrollStyle.css";
 import { FaSearch } from "react-icons/fa";
 import ScrollingElement from "./ScrollElements";
-
+import { Link } from "react-router-dom";
 const MainComponent = () => {
   const [searchText, setSearchText] = useState("");
   const [data, setData] = useState([]);
@@ -40,7 +40,7 @@ const MainComponent = () => {
 
         // Signal : The signal read-only property of the AbortController interface returns an AbortSignal object instance, which can be used to communicate with/abort a DOM request as desired.
 
-        const promise =  fetch(
+        const promise = fetch(
           "https://openlibrary.org/search.json?" +
             new URLSearchParams({
               q: inputValue,
@@ -48,14 +48,14 @@ const MainComponent = () => {
             }),
           { signal: controllerRef.current.signal }
         );
-        
-        promise.then((response)=>response.json()).then(async(result)=>{
-              let data = await result
-              setData((prevData) => [...prevData, ...data.docs])
-              resolve();
-        });
-        
-        
+
+        promise
+          .then((response) => response.json())
+          .then(async (result) => {
+            let data = await result;
+            setData((prevData) => [...prevData, ...data.docs]);
+            resolve();
+          });
       } catch (error) {
         reject(error);
         // When abort() is called, the fetch() promise rejects with a DOMException named AbortError.
@@ -73,11 +73,11 @@ const MainComponent = () => {
             <div>
               <button
                 id="btn"
-                onClick={() =>
-                  window.location.assign("/Scroller/ScrollerTypeOne")
-                }
+                // onClick={() =>
+                //   window.location.assign("/Scroller/ScrollerTypeOne")
+                //            Or  Below Method       }
               >
-                Check New Scroller
+                <Link to={`/Scroller/ScrollerTypeOne`}>Scroll Type One</Link>
               </button>
             </div>
           </div>

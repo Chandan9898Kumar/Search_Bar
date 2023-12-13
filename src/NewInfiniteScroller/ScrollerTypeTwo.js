@@ -1,44 +1,41 @@
-import React, { useState, useRef } from "react";
+import React, { useState  } from "react";
 
 export default function ScrollerTypeTwo() {
   const [count, setCount] = useState(50);
-
-  const scrollElement = useRef(0);
-  let co = 0;
 
   let elements = [];
   for (let x = 0; x < count; x++) {
     elements.push(x);
   }
 
-  //    Its width need to modify later .
-  const handleScroll = () => {
-    let overHeight = scrollElement.current.offsetHeight + co++;
+  //  To detect if the scroller has reached to bottom.
 
-    if (overHeight + 30 >= window.innerHeight - 450) {
+  //  Subtract the scrolled height from the total scrollable height. If this is equal to the visible area, you've reached the bottom!
+
+  //  Ex :   element.scrollHeight - element.scrollTop === element.clientHeight;
+  const handleScroll = (e) => {
+    let overHeight = e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight;
+    if (overHeight) {
       setCount(count + 50);
     }
   };
 
   return (
-    (
-      <>
-        <div
-          id="scroller"
-          ref={scrollElement}
-          style={{
-            width: "100%",
-            height: "400px",
-            overflow: "auto",
-            backgroundColor: "gray",
-          }}
-          onScroll={handleScroll}
-        >
-          {elements.map((item) => {
-            return <li key={item}>{item}</li>;
-          })}
-        </div>
-      </>
-    )
+    <>
+      <div
+        id="scroller"
+        style={{
+          width: "100%",
+          height: "400px",
+          overflow: "auto",
+          backgroundColor: "gray",
+        }}
+        onScroll={handleScroll}
+      >
+        {elements.map((item) => {
+          return <li key={item}>{item}</li>;
+        })}
+      </div>
+    </>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import { Link } from "react-router-dom";
 export default function ScrollerTypeOne() {
   const [count, setCount] = useState(50);
 
@@ -27,11 +27,13 @@ export default function ScrollerTypeOne() {
     <div>
       <div style={{ marginLeft: "50%" }}>
         <button
-          onClick={() =>
-            window.location.assign("/Scroller/ScrollerTypeOne/ScrollerTypeTwo")
-          }
+        // onClick={() =>
+        //   window.location.assign("/Scroller/ScrollerTypeOne/ScrollerTypeTwo")
+        // }
         >
-          New Scroller
+          <Link to={`/Scroller/ScrollerTypeOne/ScrollerTypeTwo`}>
+            Scroll Type Two
+          </Link>
         </button>
       </div>
       <div>

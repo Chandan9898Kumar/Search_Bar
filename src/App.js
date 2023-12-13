@@ -26,8 +26,8 @@ function App() {
             <Route exact path="/CountdownTimer" element={<CountdownTimer />} />
             <Route exact path="/stopWatch" element={<StopWatchApp />} />
             <Route exact path="/Scroller" element={<MainComponent />} />
-            <Route exact path="/Scroller/ScrollerTypeOne" element={<ScrollerTypeOne />} />
-            <Route exact path="/Scroller/ScrollerTypeOne/ScrollerTypeTwo" element={<ScrollerTypeTwo />} />
+            <Route exact path="/Scroller/:typeOne" element={<ScrollerTypeOne />} />
+            <Route exact path="/Scroller/:typeOne/:typeTwo" element={<ScrollerTypeTwo />} />
           </Routes>
         </BrowserRouter>
       </Suspense>
